@@ -4,8 +4,6 @@ const { Button } = require('powercord/components');
 
 module.exports = class Settings extends React.PureComponent {
     render() {
-        console.log('DFSDFSDFSDFSFDSDFSDFSDFSDFSDFSDFSD')
-        console.log(this.props)
         return <>
             <TextInput
                 value={ this.props.getSetting('soundURL', 'https://raw.githubusercontent.com/melmsie/powercord-jingle/master/audio/ok.mp3') }
