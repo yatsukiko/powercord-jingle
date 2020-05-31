@@ -1,8 +1,8 @@
 {
   "name": "Startup Sound",
   "version": "1.1.0",
-  "description": "Adds discord jingle on startup",
-  "author": "Original: yatsukiko | Settings: Melmsie",
+  "description": "Adds a sound or jingle on startup",
+  "author": "Original: yatsukiko\nSettings: Melmsie",
   "license": "MIT",
   "repo": "https://github.com/yatsukiko/pc-jingle"
 }

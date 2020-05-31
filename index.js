@@ -1,3 +1,4 @@
+const { React } = require('powercord/webpack')
 const { Plugin } = require("powercord/entities");
 const { waitFor } = require('powercord/util');
 const Settings = require('./Settings')
@@ -7,7 +8,10 @@ module.exports = class jingle extends Plugin {
 		powercord.api.settings.registerSettings('startupSound', {
 			category: this.entityID,
 			label: 'Startup Sound',
-			render: Settings
+			render: props => React.createElement(Settings, {
+				...props,
+				mainPlugin: this
+			  })
 		  })
 
 
@@ -16,8 +20,6 @@ module.exports = class jingle extends Plugin {
 			this.audio.autoplay = true
 			this.audio.src = this.settings.get('soundURL', 'https://raw.githubusercontent.com/melmsie/powercord-jingle/master/audio/ok.mp3'), //default to "ok"
 			this.audio.volume = 0.4 //change from 0-1
-			console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
-		
 	}
 
 	pluginWillUnload () {
