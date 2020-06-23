@@ -19,7 +19,7 @@ module.exports = class jingle extends Plugin {
 			this.audio = document.createElement("audio")
 			this.audio.autoplay = true
 			this.audio.src = this.settings.get('soundURL', 'https://raw.githubusercontent.com/melmsie/powercord-jingle/master/audio/ok.mp3'), //default to "ok"
-			this.audio.volume = 0.4 //change from 0-1
+			this.audio.volume = this.settings.get('volumej')/100 //change from 0-1
 	}
 
 	pluginWillUnload () {
