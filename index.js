@@ -5,7 +5,7 @@ const Settings = require('./Settings')
 
 module.exports = class jingle extends Plugin {
 	async startPlugin () {	
-		powercord.api.settings.registerSettings('startupSound', {
+		powercord.api.settings.registerSettings(this.entityID, {
 			category: this.entityID,
 			label: 'Startup Sound',
 			render: props => React.createElement(Settings, {
