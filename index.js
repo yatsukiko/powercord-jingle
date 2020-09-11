@@ -23,6 +23,6 @@ module.exports = class jingle extends Plugin {
 	}
 
 	pluginWillUnload () {
-		powercord.api.settings.unregisterSettings('startupSound')
+		powercord.api.settings.unregisterSettings(this.entityID)
 	  }
 }
