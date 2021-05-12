@@ -26,7 +26,6 @@ module.exports = class Settings extends React.PureComponent {
     this.props.mainPlugin.audio.src = this.props.getSetting('soundURL', 'https://raw.githubusercontent.com/melmsie/powercord-jingle/master/audio/ok.mp3'), //default to "ok"
     this.props.mainPlugin.audio.volume = this.props.getSetting('volumej')/100 //change from 0-1
 	this.props.mainPlugin.audio.load()
-	this.props.mainPlugin.audio.play()
 }}>Test audio</Button>
         </>
     }
