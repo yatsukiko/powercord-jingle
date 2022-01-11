@@ -15,7 +15,7 @@ module.exports = class jingle extends Plugin {
 		  })
 
 
-		await waitFor(`.container-3baos1`) //waits till this shows up then do rest? idk
+		await waitFor(`.container-YkUktl`) //waits till this shows up then do rest? idk
 			this.audio = document.createElement("audio")
 			this.audio.autoplay = true
 			this.audio.src = this.settings.get('soundURL', '/assets/773745b4ebae9f47e802724ec33b8a3f.mp3'), //default to "ok"
