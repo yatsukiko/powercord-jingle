@@ -5,7 +5,7 @@ var addnote = "👍"
 module.exports = class Settings extends React.PureComponent {
 		render() {
 		const { getSetting, updateSetting } = this.props;
-		if (getSetting('soundURL') !== undefined || getSetting('JSoundURL') == undefined){
+		if (getSetting('soundURL') !== undefined && getSetting('JSoundURL') == undefined){
 			addnote = "Detected sound url from previous version: " + getSetting('soundURL') //as you can see im like even worse than string editor 
 		}
         return <>
